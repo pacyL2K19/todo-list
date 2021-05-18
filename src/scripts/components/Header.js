@@ -8,11 +8,14 @@ const createHeader = () => {
   container.setAttribute('class', 'pt-5 d-flex justify-content-between');
   h2.setAttribute('class', 'text-secondary');
   setAttributes(addProjectButton, {
-    class: 'btn btn-primary btn-lg shadow', id: 'add-project-btn', 'data-bs-toggle': 'modal', 'data-bs-target': '#addProject',
+    class: 'btn btn-primary btn-lg shadow',
+    id: 'add-project-btn',
+    'data-bs-toggle': 'modal',
+    'data-bs-target': '#addProject',
   });
 
-  h2.textContent = 'TODO List - JavaScript';
-  addProjectButton.textContent = 'Add project';
+  h2.textContent = 'ToDo List';
+  addProjectButton.textContent = 'New Project';
 
   container.append(h2, addProjectButton);
 
