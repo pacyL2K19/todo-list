@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable import/no-cycle */
-import newProject from '../project';
+import newProject from '../Project';
 import allProjectsMarkup from './renderProjects';
 
 const projects = JSON.parse(localStorage.getItem('projects'));

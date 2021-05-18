@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable import/no-cycle */
 import { cleanForm } from './addProject';
-import newTask from '../task';
+import newTask from '../Task';
 import allProjectsMarkup from './renderProjects';
 import setAttributes from '../setAttributes';
 
