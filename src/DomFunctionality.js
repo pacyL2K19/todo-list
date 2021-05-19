@@ -11,6 +11,7 @@ const newProjectDom = (() => {
   const submitProjectWindow = document.querySelector('.submit-project-window');
   const _nameField = document.getElementById('project-name');
   const _descriptionField = document.getElementById('project-description');
+  const alertSubmitProject = document.getElementById('alert-submit-project');
 
   function clear() {
     _nameField.value = '';
@@ -36,7 +37,12 @@ const newProjectDom = (() => {
       createNewProject(name, description);
       clear();
       hide();
-    } else alert('Please fill all requierd fields.');
+    } else {
+      alertSubmitProject.style.display = 'block';
+      setTimeout(() => {
+        alertSubmitProject.style.display = 'none';
+      }, 1500);
+    }
   }
 
   return {
@@ -101,7 +107,12 @@ const newTaskDom = (() => {
 
       createNewTask(name, dueDate, priority);
       hide();
-    } else alertSubmitTask.style.display = 'block';
+    } else {
+      alertSubmitTask.style.display = 'block';
+      setTimeout(() => {
+        alertSubmitTask.style.display = 'none';
+      }, 1500);
+    }
   }
 
   return {
@@ -122,7 +133,8 @@ const editTaskDom = (() => {
   const _nameField = document.getElementById('edit-task-name');
   const _dueDateField = document.getElementById('edit-task-due-date');
   const _priorityField = document.getElementById('edit-priority');
-  let selectedTask; // index of the active task
+  const alertEditTask = document.getElementById('alert-edit-task');
+  let selectedTask;
 
   function show(index) {
     newProjectDom.hide();
@@ -150,7 +162,12 @@ const editTaskDom = (() => {
 
       editTask(selectedTask, name, dueDate, priority);
       hide();
-    } else alert('Please fill all required fields');
+    } else {
+      alertEditTask.style.display = 'block';
+      setTimeout(() => {
+        alertEditTask.style.display = 'none';
+      }, 1500);
+    }
   }
 
   return {

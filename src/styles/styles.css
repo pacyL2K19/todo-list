@@ -20,7 +20,6 @@ h3 {
   font-size: 2rem;
   letter-spacing: 0.1rem;
   color: #323b4f;
-  height: fit-content;
   text-align: left;
   margin-left: 1rem;
 }
@@ -52,10 +51,9 @@ h3 {
 #add-project {
   margin-right: 0.5rem;
   padding: 0.4rem 0.8rem;
-  height: fit-content;
   background-color: #2268ff;
   border: 1px solid #2268ff;
-  color: #ffffff;
+  color: #fff;
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
   align-self: center;
@@ -64,7 +62,7 @@ h3 {
 }
 
 #add-project:hover {
-  background-color: #ffffff;
+  background-color: #fff;
   color: #2268ff;
   cursor: pointer;
 }
@@ -78,7 +76,6 @@ h3 {
 .single-project-container {
   display: flex;
   flex-wrap: wrap;
-  height: fit-content;
   cursor: pointer;
   margin-bottom: 2px;
 }
@@ -107,12 +104,6 @@ h3 {
   transition: 0.3s;
 }
 
-.single-project-container button:hover {
-  border-radius: 30px;
-  color: red;
-  cursor: pointer;
-}
-
 .active-project {
   background-color: #f8faff;
   border-radius: 30px;
@@ -133,10 +124,10 @@ h3 {
 
 .alert {
   display: none;
-}
-
-.alert-shwown {
-  display: block;
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
 .active-project-container {
@@ -155,7 +146,6 @@ h3 {
   border-radius: 25px;
   color: white;
   width: fit-content;
-  flex-grow: auto;
   margin-right: 2rem;
   align-self: center;
   transition: 0.3s;
@@ -204,8 +194,9 @@ h3 {
   transition: 0.2s;
   margin-top: 0.2rem;
 }
+
 .single-task-container:hover {
-  box-shadow: 0px 2px 20px #eff1f5;
+  box-shadow: 0 2px 20px #eff1f5;
   transform: scale(1.005);
   cursor: pointer;
 }
@@ -240,7 +231,6 @@ h3 {
 
 .edit-task {
   background-color: white;
-  border: none;
   border: none;
   align-self: center;
   color: #9ba9c2;
@@ -296,7 +286,6 @@ input {
   display: block;
   margin: 1rem auto;
   width: 70%;
-  padding: 0.2rem;
   border: none;
   border-bottom: 1px solid #a8adb3;
   padding: 5px 10px;
@@ -317,7 +306,6 @@ input:focus {
 
 .submit-project-window button {
   margin: 1rem 0.7rem;
-  border: none;
   padding: 0.8em 2.2em;
   border-radius: 24px;
   letter-spacing: 0.08rem;
@@ -345,7 +333,7 @@ input:focus {
   border-radius: 14px;
   margin: 30px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 2px 20px #eff1f5;
+  box-shadow: 0 2px 20px #eff1f5;
   display: none;
 }
 
@@ -353,16 +341,20 @@ input:focus {
   display: block;
   margin: 1rem auto;
   width: 70%;
-  padding: 0.2rem;
   border: none;
   border-bottom: 1px solid #c0bebe;
   padding: 5px 10px;
   outline: none;
 }
 
+.single-project-container button:hover {
+  border-radius: 30px;
+  color: red;
+  cursor: pointer;
+}
+
 #submit-task-window button {
   margin: 1rem 0.7rem;
-  border: none;
   padding: 0.8em 2.2em;
   border-radius: 24px;
   letter-spacing: 0.08rem;
@@ -370,12 +362,6 @@ input:focus {
   color: #2268ff;
   background-color: transparent;
   transition: 0.3s;
-}
-
-#submit-task-window button:hover {
-  background-color: #2268ff;
-  color: white;
-  cursor: pointer;
 }
 
 .button-add-task-container {
@@ -390,7 +376,7 @@ input:focus {
   border-radius: 14px;
   margin: 30px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 2px 20px #eff1f5;
+  box-shadow: 0 2px 20px #eff1f5;
   display: none;
 }
 
@@ -398,7 +384,6 @@ input:focus {
   display: block;
   margin: 1rem auto;
   width: 70%;
-  padding: 0.2rem;
   border: none;
   border-bottom: 1px solid #c0bebe;
   padding: 5px 10px;
@@ -407,7 +392,6 @@ input:focus {
 
 #edit-task-window button {
   margin: 1rem 0.7rem;
-  border: none;
   padding: 0.8em 2.2em;
   border-radius: 24px;
   letter-spacing: 0.08rem;
@@ -415,6 +399,12 @@ input:focus {
   color: #2268ff;
   background-color: transparent;
   transition: 0.3s;
+}
+
+#submit-task-window button:hover {
+  background-color: #2268ff;
+  color: white;
+  cursor: pointer;
 }
 
 #edit-task-window button:hover {
