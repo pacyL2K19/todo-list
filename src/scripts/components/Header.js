@@ -7,7 +7,7 @@ const createHeader = () => {
   const addProjectButton = createDomElement('button');
 
   setAttributes(container, {
-    class: 'pt-5 d-flex justify-content-between',
+    class: 'py-5 d-flex justify-content-between header',
   });
   setAttributes(addProjectButton, {
     class: 'btn btn-primary btn-lg shadow',
