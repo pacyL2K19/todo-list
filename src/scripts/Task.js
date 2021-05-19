@@ -17,6 +17,7 @@ const newTask = (title, description, priority, date) => {
     checkList,
     addItem,
     deleteItem,
+    completed: false,
   };
 };
 

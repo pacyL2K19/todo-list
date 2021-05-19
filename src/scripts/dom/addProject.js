@@ -14,7 +14,7 @@ const cleanForm = (elts = []) => {
 const handleGeneratingNewInstance = () => {
   const projectTitleInput = document.querySelector('#project-title-input');
 
-  if (projectTitleInput.value.trim().length > 1) {
+  if (projectTitleInput.value.trim().length > 3) {
     const newProjectInstance = newProject(projectTitleInput.value);
     let prjs = [];
 

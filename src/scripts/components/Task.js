@@ -42,7 +42,7 @@ const displayTask = (
   deleteIcon.className = 'fas fa-trash mx-3 text-danger';
 
   const priority = document.createElement('span');
-  priority.className = 'badge rounded-pill bg-danger';
+  priority.className = taskPriority === 'High' ? 'badge rounded-pill bg-danger' : 'badge rounded-pill bg-primary';
   priority.innerHTML = taskPriority;
 
   const details = document.createElement('p');
