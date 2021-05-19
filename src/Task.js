@@ -1,9 +1,10 @@
+/* eslint-disable import/prefer-default-export */
 export const newTask = (name, dueDate, priority) => {
-    let complete = false;
-    return {
-        name,
-        dueDate,
-        priority,
-        complete
-    }
-}
+  const complete = false;
+  return {
+    name,
+    dueDate,
+    priority,
+    complete,
+  };
+};
