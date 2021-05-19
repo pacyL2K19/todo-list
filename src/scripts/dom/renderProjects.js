@@ -1,5 +1,5 @@
 /* eslint-disable import/no-cycle */
-import displayProject from '../components/projectComponent';
+import displayProject from '../components/Project';
 import { editProject } from './editProject';
 import { deleteProject } from './deleteProject';
 import { addTask } from './addTask';
