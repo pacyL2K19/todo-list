@@ -5,20 +5,20 @@ import { createNewProject, createNewTask, updateUI } from './Logic';
 
 let allProjects = [];
 
-// If there is no local storage, add default projects
+// Default project a helper 
 
 if (!localStorage.getItem('AllProjects')) {
   createNewProject('Sample Project', 'This is my first project');
 
   createNewTask('This is a sample task', '2021-04-15', 'High');
-  createNewTask('On the left side projects are listed', '2021-04-15', 'High');
+  createNewTask('On the left side projects are listed', '2021-04-15', 'Low');
   createNewTask('On the right you see the tasks of the selected project', '2021-04-15', 'High');
-  createNewTask('By clicking on the task you can mark it as done', '2021-04-15', 'High');
+  createNewTask('By clicking on the task you can mark it as done', '2021-04-15', 'Low');
 }
 
 // Local Storage
 
-function getFromLocalMemory() {
+const getFromLocalMemory =  () => {
   const originalProjects = JSON.parse(localStorage.getItem('AllProjects'));
   if (originalProjects) {
     allProjects = originalProjects;
@@ -26,7 +26,7 @@ function getFromLocalMemory() {
   }
 }
 
-function setLocalMemory(projects) {
+const setLocalMemory = (projects) => {
   if (projects !== []) {
     const myProjectsLocal = JSON.stringify(projects);
     localStorage.setItem('AllProjects', myProjectsLocal);
