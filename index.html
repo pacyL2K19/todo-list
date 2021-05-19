@@ -1,22 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-    <title>TODO List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <title>todo-app</title>
 </head>
+<body>   
+    <div class="grid-container">
+        <div class="project-container">
+            <div class="logo">
+                todo-list
+            </div>
+            <div class="project-container-title">
+                <h4>Projects</h4>
+                <button id="add-project">+</button>
+            </div>
+            <div id="project-list"></div>
+            <div class="submit-project-window" style="display: none;">
+                <div>
+                    <input type="text" id="project-name" placeholder="Title">
+                </div> 
+                <div>
+                    <input type="text" id="project-description" placeholder="Description">
+                </div>
+                <div class="project-button-container">
+                    <button id="submit-project">Submit</button>
+                    <button id="cancel-submit-project">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div class="tasks-container">
+            <div class="active-project-container" style="display: none;">
+                <div class="active-project-description"></div>
+                <button class="add-task">+  Add Task</button>
+            </div>
+            <div class="task-list-container">
+            </div>
+            <div id="submit-task-window" style="display: none;">
+                <div>
+                    <input type="text" id="task-name" placeholder="Title" >
+                </div> 
+                <div>
+                    <input type="date" id="task-due-date" >
+                </div>
+                <div>
+                    <input list="priority-value" id="priority" placeholder="Priority">
+                    <datalist id="priority-value">
+                        <option value = "High">
+                        <option value="Low">
+                    </datalist>
+                </div>
+                <div class="button-add-task-container">
+                    <button id="submit-task">Add Task</button>
+                    <button id="cancel-submit-task">Cancel</button>
+                </div>
+            </div>
+            <div id="edit-task-window" style="display: none;">
+                <div>
+                    <input type="text" id="edit-task-name" placeholder="Title">
+                </div> 
+                <div>
+                    <input type="date" id="edit-task-due-date">
+                </div>
+                <div>
+                    <input list="priority-value" id="edit-priority" placeholder="Priority">
+                    <datalist id="priority-value">
+                        <option value="High"></option>
+                        <option value="Low"></option>
+                    </datalist>
+                </div>
+                <div class="button-edit-task-container">
+                    <button id="update-task">Update Task</button>
+                    <button id="cancel-update-task">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<body class="bg-test container-fluid">
-    <div id="content" class="px-5"></div>
-    <script src="https://kit.fontawesome.com/1ba545dca5.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-    </script>
-    <script src="./main.js"></script>
+    <script src="main.js"></script>
 </body>
-
 </html>
