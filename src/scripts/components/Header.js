@@ -1,12 +1,14 @@
 import setAttributes from '../setAttributes';
+import { createDomElement } from '../dom/global';
 
 const createHeader = () => {
-  const container = document.createElement('header');
-  const h2 = document.createElement('h2');
-  const addProjectButton = document.createElement('button');
+  const container = createDomElement('header');
+  const h2 = createDomElement('h2');
+  const addProjectButton = createDomElement('button');
 
-  container.setAttribute('class', 'pt-5 d-flex justify-content-between');
-  h2.setAttribute('class', 'text-secondary');
+  setAttributes(container, {
+    class: 'pt-5 d-flex justify-content-between',
+  });
   setAttributes(addProjectButton, {
     class: 'btn btn-primary btn-lg shadow',
     id: 'add-project-btn',
