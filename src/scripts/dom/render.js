@@ -1,6 +1,6 @@
-import createHeader from '../components/headerComponent';
-import { deleteProjectModal, addProjectModal } from '../components/modalComponent';
-import { addTaskModal, deleteTaskModal } from '../components/taskModalComponent';
+import createHeader from '../components/Header';
+import { deleteProjectModal, addProjectModal } from '../components/Modal';
+import { addTaskModal, deleteTaskModal } from '../components/TaskModal';
 import setAttributes from '../setAttributes';
 import { projects, addProject } from './addProject';
 import { handleUpdateProject } from './editProject';
