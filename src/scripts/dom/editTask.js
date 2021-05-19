@@ -19,7 +19,6 @@ const handleEditingTask = event => {
   const myModalEl = document.getElementById('addTask');
   const modal = bootstrap.Modal.getInstance(myModalEl);
 
-  // Modify the title as well as the placeholder text
   const header = document.querySelector('#exMlTask');
   header.innerHTML = 'Edit Task';
   const updateBtn = document.querySelector('#update-btn-task');
