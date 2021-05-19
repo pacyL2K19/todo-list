@@ -1,10 +1,11 @@
+/* eslint-disable import/prefer-default-export */
 export const newProject = (name, description) => {
-    let tasks = []
-    let active = true;
-    return {
-        name,
-        description,
-        tasks,
-        active
-    }
-}
+  const tasks = [];
+  const active = true;
+  return {
+    name,
+    description,
+    tasks,
+    active,
+  };
+};

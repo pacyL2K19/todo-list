@@ -5,7 +5,7 @@ import { createNewProject, createNewTask, updateUI } from './Logic';
 
 let allProjects = [];
 
-// Default project a helper 
+// Default project a helper
 
 if (!localStorage.getItem('AllProjects')) {
   createNewProject('Sample Project', 'This is my first project');
@@ -18,20 +18,20 @@ if (!localStorage.getItem('AllProjects')) {
 
 // Local Storage
 
-const getFromLocalMemory =  () => {
+const getFromLocalMemory = () => {
   const originalProjects = JSON.parse(localStorage.getItem('AllProjects'));
   if (originalProjects) {
     allProjects = originalProjects;
     updateUI();
   }
-}
+};
 
 const setLocalMemory = (projects) => {
   if (projects !== []) {
     const myProjectsLocal = JSON.stringify(projects);
     localStorage.setItem('AllProjects', myProjectsLocal);
   }
-}
+};
 
 getFromLocalMemory();
 
