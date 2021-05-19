@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
     <title>todo-app</title>
 </head>
-<body>   
+
+<body>
     <div class="grid-container">
         <div class="project-container">
             <div class="logo">
@@ -21,10 +23,10 @@
                 <button id="add-project">+</button>
             </div>
             <div id="project-list"></div>
-            <div class="submit-project-window" style="display: none;">
+            <div class="submit-project-window">
                 <div>
                     <input type="text" id="project-name" placeholder="Title">
-                </div> 
+                </div>
                 <div>
                     <input type="text" id="project-description" placeholder="Description">
                 </div>
@@ -35,53 +37,60 @@
             </div>
         </div>
         <div class="tasks-container">
-            <div class="active-project-container" style="display: none;">
+            <div class="active-project-container">
                 <div class="active-project-description"></div>
-                <button class="add-task">+  Add Task</button>
+                <button class="add-task">+ Add Task</button>
             </div>
             <div class="task-list-container">
             </div>
-            <div id="submit-task-window" style="display: none;">
+            <div id="submit-task-window"">
                 <div>
-                    <input type="text" id="task-name" placeholder="Title" >
-                </div> 
-                <div>
-                    <input type="date" id="task-due-date" >
-                </div>
-                <div>
-                    <input list="priority-value" id="priority" placeholder="Priority">
-                    <datalist id="priority-value">
-                        <option value = "High">
-                        <option value="Low">
-                    </datalist>
-                </div>
-                <div class="button-add-task-container">
-                    <button id="submit-task">Add Task</button>
-                    <button id="cancel-submit-task">Cancel</button>
-                </div>
+                    <input type=" text" id="task-name" placeholder="Title">
             </div>
-            <div id="edit-task-window" style="display: none;">
-                <div>
-                    <input type="text" id="edit-task-name" placeholder="Title">
-                </div> 
-                <div>
-                    <input type="date" id="edit-task-due-date">
-                </div>
-                <div>
-                    <input list="priority-value" id="edit-priority" placeholder="Priority">
-                    <datalist id="priority-value">
-                        <option value="High"></option>
-                        <option value="Low"></option>
-                    </datalist>
-                </div>
-                <div class="button-edit-task-container">
-                    <button id="update-task">Update Task</button>
-                    <button id="cancel-update-task">Cancel</button>
-                </div>
+            <div>
+                <input type="date" id="task-due-date">
+            </div>
+            <div>
+                <input list="priority-value" id="priority" placeholder="Priority">
+                <datalist id="priority-value">
+                    <option value="High">
+                    <option value="Low">
+                </datalist>
+            </div>
+            <div class="alert" id="alert-submit-task">
+                Please enter a correct data input
+            </div>
+            <div class="button-add-task-container">
+                <button id="submit-task">Add Task</button>
+                <button id="cancel-submit-task">Cancel</button>
             </div>
         </div>
+        <div id="edit-task-window">
+            <div>
+                <input type="text" id="edit-task-name" placeholder="Title">
+            </div>
+            <div>
+                <input type="date" id="edit-task-due-date">
+            </div>
+            <div>
+                <input list="priority-value" id="edit-priority" placeholder="Priority">
+                <datalist id="priority-value">
+                    <option value="High"></option>
+                    <option value="Low"></option>
+                </datalist>
+            </div>
+            <div class="alert" id="alert-edit-task">
+                Please enter a correct data input
+            </div>
+            <div class="button-edit-task-container">
+                <button id="update-task">Update Task</button>
+                <button id="cancel-update-task">Cancel</button>
+            </div>
+        </div>
+    </div>
     </div>
 
     <script src="main.js"></script>
 </body>
+
 </html>
