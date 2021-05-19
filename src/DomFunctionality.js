@@ -74,6 +74,7 @@ const newTaskDom = (() => {
   const _nameField = document.getElementById('task-name');
   const _dueDateField = document.getElementById('task-due-date');
   const _priorityField = document.getElementById('priority');
+  const alertSubmitTask = document.getElementById('alert-submit-task');
 
   function show() {
     editTaskDom.hide();
@@ -100,7 +101,7 @@ const newTaskDom = (() => {
 
       createNewTask(name, dueDate, priority);
       hide();
-    } else alert('Please enter correct data');
+    } else alertSubmitTask.style.display = 'block';
   }
 
   return {
