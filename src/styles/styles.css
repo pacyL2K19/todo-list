@@ -131,6 +131,14 @@ h3 {
   align-items: center;
 }
 
+.alert {
+  display: none;
+}
+
+.alert-shwown {
+  display: block;
+}
+
 .active-project-container {
   justify-content: center;
   background-color: rgb(255, 255, 255);
@@ -303,6 +311,10 @@ input:focus {
   border-bottom: 1px solid #2268ff;
 }
 
+.submit-project-window {
+  display: none;
+}
+
 .submit-project-window button {
   margin: 1rem 0.7rem;
   border: none;
@@ -379,6 +391,7 @@ input:focus {
   margin: 30px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 2px 20px #eff1f5;
+  display: none;
 }
 
 #edit-task-window input {
