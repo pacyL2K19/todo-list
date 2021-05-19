@@ -14,3 +14,7 @@
 .hide {
   display: none;
 }
+
+#content {
+  min-height: 100vh;
+}
