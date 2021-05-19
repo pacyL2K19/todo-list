@@ -12,6 +12,7 @@ import { handleDeleteTask } from './deleteTask';
 
 const render = () => {
   const contentDiv = document.querySelector('#content');
+
   const header = createHeader();
   const addModal = addProjectModal();
   const delModal = deleteProjectModal();

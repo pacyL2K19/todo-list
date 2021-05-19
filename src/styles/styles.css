@@ -17,4 +17,5 @@
 
 #content {
   min-height: 100vh;
+  background: url(/src/assets/background.jpg) no-repeat center;
 }
