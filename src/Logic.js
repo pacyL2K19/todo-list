@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-use-before-define */
 /* eslint-disable import/no-cycle */
-import { allProjects, setLocalMemory } from '.';
+import { allProjects, setLocalMemory } from './index';
 import { newProject } from './Project';
 import { newTask } from './Task';
 import { renderProjects, renderHeader, renderTasks } from './Render';
