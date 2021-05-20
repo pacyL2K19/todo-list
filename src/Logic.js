@@ -63,10 +63,11 @@ const deleteTask = (index) => {
   setLocalMemory(allProjects);
 };
 
-const editTask = (index, name, dueDate, priority) => {
+const editTask = (index, name, dueDate, priority, description) => {
   activeProject().tasks[index].name = name;
   activeProject().tasks[index].dueDate = dueDate;
   activeProject().tasks[index].priority = priority;
+  activeProject().tasks[index].description = description;
 
   updateUI();
   setLocalMemory(allProjects);

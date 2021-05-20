@@ -143,6 +143,7 @@ const editTaskDom = (() => {
   const updateTaskBtn = document.getElementById('update-task');
   const cancelUpdateBtn = document.getElementById('cancel-update-task');
   const _nameField = document.getElementById('edit-task-name');
+  const _description = document.getElementById('edit-task-description');
   const _dueDateField = document.getElementById('edit-task-due-date');
   const _priorityField = document.getElementById('edit-priority');
   const alertEditTask = document.getElementById('alert-edit-task');
@@ -166,6 +167,7 @@ const editTaskDom = (() => {
     _nameField.value = '';
     _dueDateField.value = '';
     _priorityField.value = '';
+    _description.value = '';
   };
 
   const updateTask = () => {
@@ -173,8 +175,9 @@ const editTaskDom = (() => {
       const name = _nameField.value;
       const dueDate = _dueDateField.value;
       const priority = _priorityField.value;
+      const description = _description.value;
 
-      editTask(selectedTask, name, dueDate, priority);
+      editTask(selectedTask, name, dueDate, priority, description);
       hide();
     } else {
       alertEditTask.classList.remove('alert');
