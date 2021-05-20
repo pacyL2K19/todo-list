@@ -31,7 +31,7 @@ const setLocalMemory = (projects) => {
   // if (projects !== []) {
   //   const myProjectsLocal = JSON.stringify(projects);
   //   window.localStorage.setItem('AllProjects', myProjectsLocal);
-  //   console.log(window.localStorage.getItem('AllProjects'));
+  //  console.log(window.localStorage.getItem('AllProjects'));
   // }
 };
 
