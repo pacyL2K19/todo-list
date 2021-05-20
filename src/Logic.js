@@ -13,7 +13,7 @@ const createNewProject = (name, description) => {
   allProjects.push(newProject(name, description));
 
   updateUI();
-  () => setLocalMemory(allProjects);
+  setLocalMemory(allProjects);
   displayHeader.show();
 };
 
@@ -32,7 +32,7 @@ const deleteProject = (index) => {
     allProjects.splice(index, 1);
     updateUI();
   }
-  () => setLocalMemory(allProjects);
+  setLocalMemory(allProjects);
 };
 
 const resetActiveProject = () => {
@@ -43,7 +43,7 @@ const setActiveProject = (index) => {
   resetActiveProject();
   allProjects[index].active = true;
   updateUI();
-  () => setLocalMemory(allProjects);
+  setLocalMemory(allProjects);
 };
 
 const activeProject = () => {
@@ -54,13 +54,13 @@ const activeProject = () => {
 const createNewTask = (name, dueDate, priority, description) => {
   activeProject().tasks.push(newTask(name, dueDate, priority, description));
   renderTasks();
-  () => setLocalMemory(allProjects);
+  setLocalMemory(allProjects);
 };
 
 const deleteTask = (index) => {
   activeProject().tasks.splice(index, 1);
   updateUI();
-  () => setLocalMemory(allProjects);
+  setLocalMemory(allProjects);
 };
 
 const editTask = (index, name, dueDate, priority, description) => {
@@ -70,7 +70,7 @@ const editTask = (index, name, dueDate, priority, description) => {
   activeProject().tasks[index].description = description;
 
   updateUI();
-  () => setLocalMemory(allProjects);
+  setLocalMemory(allProjects);
 };
 
 const updateTaskStatus = (index) => {
@@ -79,7 +79,7 @@ const updateTaskStatus = (index) => {
     : activeProject().tasks[index].complete = true;
 
   updateUI();
-  () => setLocalMemory(allProjects);
+  setLocalMemory(allProjects);
 };
 
 const updateUI = () => {
