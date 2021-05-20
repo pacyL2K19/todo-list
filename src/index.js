@@ -7,7 +7,7 @@ let allProjects = [];
 
 // Default project a helper
 
-if (!localStorage.getItem('AllProjects')) {
+if (!window.localStorage.getItem('AllProjects')) {
   createNewProject('Sample Project', 'This is my first project');
 
   createNewTask('This is a sample task', '2021-04-15', 'High');
@@ -19,7 +19,7 @@ if (!localStorage.getItem('AllProjects')) {
 // Local Storage
 
 const getFromLocalMemory = () => {
-  const originalProjects = JSON.parse(localStorage.getItem('AllProjects'));
+  const originalProjects = JSON.parse(window.localStorage.getItem('AllProjects'));
   if (originalProjects) {
     allProjects = originalProjects;
     updateUI();
@@ -30,6 +30,7 @@ const setLocalMemory = (projects) => {
   if (projects !== []) {
     const myProjectsLocal = JSON.stringify(projects);
     localStorage.setItem('AllProjects', myProjectsLocal);
+    console.log(window.localStorage.getItem('AllProjects'));
   }
 };
 
