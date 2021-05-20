@@ -9,12 +9,12 @@ import { renderProjects, renderHeader, renderTasks } from './Render';
 import { displayHeader } from './DomFunctionality';
 
 const setLocalMemory = (projects) => {
-  console.log(projects);
-  // if (projects !== []) {
-  //   const myProjectsLocal = JSON.stringify(projects);
-  //   window.localStorage.setItem('AllProjects', myProjectsLocal);
+  // console.log(projects);
+  if (projects !== []) {
+    const myProjectsLocal = JSON.stringify(projects);
+    window.localStorage.setItem('AllProjects', myProjectsLocal);
   //  console.log(window.localStorage.getItem('AllProjects'));
-  // }
+  }
 };
 
 const createNewProject = (name, description) => {
