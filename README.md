@@ -27,7 +27,7 @@
     <a href="#Show-your-support">Show your support</a> &#10023;
     <a href="#License">License</a> &#10023;
     <a href="#Acknowledgments">Acknowledgments</a> &#10023;
-    <a href="https://github.com/guillainbisimwa/restaurant/issues">Report Bug</a>&#10023;
+    <a href="https://github.com/pacyL2K19/todo-list/issues">Report Bug</a>&#10023;
 
 </p>
 
