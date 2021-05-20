@@ -2,11 +2,20 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-use-before-define */
 /* eslint-disable import/no-cycle */
-import { allProjects, setLocalMemory } from './index';
+import { allProjects } from './index';
 import { newProject } from './Project';
 import { newTask } from './Task';
 import { renderProjects, renderHeader, renderTasks } from './Render';
 import { displayHeader } from './DomFunctionality';
+
+const setLocalMemory = (projects) => {
+  console.log(projects);
+  // if (projects !== []) {
+  //   const myProjectsLocal = JSON.stringify(projects);
+  //   window.localStorage.setItem('AllProjects', myProjectsLocal);
+  //  console.log(window.localStorage.getItem('AllProjects'));
+  // }
+};
 
 const createNewProject = (name, description) => {
   resetActiveProject();

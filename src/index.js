@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /* eslint-disable import/no-mutable-exports */
 /* eslint-disable import/no-cycle */
 import './StaticListener';
@@ -26,15 +27,6 @@ const getFromLocalMemory = () => {
   }
 };
 
-const setLocalMemory = (projects) => {
-  console.log(projects);
-  // if (projects !== []) {
-  //   const myProjectsLocal = JSON.stringify(projects);
-  //   window.localStorage.setItem('AllProjects', myProjectsLocal);
-  //  console.log(window.localStorage.getItem('AllProjects'));
-  // }
-};
-
 getFromLocalMemory();
 
-export { allProjects, setLocalMemory };
+export { allProjects };
