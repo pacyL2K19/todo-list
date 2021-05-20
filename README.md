@@ -90,6 +90,7 @@ Feel free to check the [issues page](https://github.com/pacyL2K19/todo-list/issu
 - Github: [@pacyL2K19](https://github.com/pacyL2K19)
 - Twitter: [@PacifiqueLinja1](https://twitter.com/PacifiqueLinja1)
 - Linkedin: [Pacifique Linjanja](https://www.linkedin.com/in/pacifique-linjanja/)
+
 ### Show your support
 
 Give a ⭐️ if you like this project!
