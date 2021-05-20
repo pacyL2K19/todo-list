@@ -41,10 +41,10 @@ const newProjectDom = (() => {
       hide();
     } else {
       alertSubmitProject.classList.remove('alert');
-      alertSubmitProject.className.add('alert-show');
+      alertSubmitProject.classList.add('alert-show');
       setTimeout(() => {
         alertSubmitProject.classList.remove('alert-show');
-        alertSubmitProject.className.add('alert');
+        alertSubmitProject.classList.add('alert');
       }, 1500);
     }
   };
