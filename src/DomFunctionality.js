@@ -79,6 +79,7 @@ const newTaskDom = (() => {
   const cancelTaskBtn = document.getElementById('cancel-submit-task');
   const _nameField = document.getElementById('task-name');
   const _dueDateField = document.getElementById('task-due-date');
+  const _description = document.getElementById('task-description');
   const _priorityField = document.getElementById('priority');
   const alertSubmitTask = document.getElementById('alert-submit-task');
 
@@ -104,8 +105,9 @@ const newTaskDom = (() => {
       const name = _nameField.value;
       const dueDate = _dueDateField.value;
       const priority = _priorityField.value;
+      const description = _description.value;
 
-      createNewTask(name, dueDate, priority);
+      createNewTask(name, dueDate, priority, description);
       hide();
     } else {
       alertSubmitTask.style.display = 'block';

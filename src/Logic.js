@@ -51,8 +51,8 @@ const activeProject = () => {
   return activeProject;
 };
 
-const createNewTask = (name, dueDate, priority) => {
-  activeProject().tasks.push(newTask(name, dueDate, priority));
+const createNewTask = (name, dueDate, priority, description) => {
+  activeProject().tasks.push(newTask(name, dueDate, priority, description));
   renderTasks();
   setLocalMemory(allProjects);
 };
