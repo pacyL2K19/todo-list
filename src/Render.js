@@ -3,7 +3,7 @@ import { allProjects } from '.';
 import { addProjectListeners, addTasksListeners } from './DynamicListener';
 import { activeProject } from './Logic';
 
-function renderProjects() {
+const renderProjects = () => {
   const projectList = document.getElementById('project-list');
 
   projectList.innerHTML = '';
@@ -30,9 +30,9 @@ function renderProjects() {
   });
 
   addProjectListeners();
-}
+};
 
-function renderHeader() {
+const renderHeader = () => {
   const activeProjectDetails = document.querySelector('.active-project-description');
 
   activeProjectDetails.innerHTML = '';
@@ -47,9 +47,9 @@ function renderHeader() {
     activeProjectDetails.appendChild(activeTitle);
     activeProjectDetails.appendChild(activeDescription);
   }
-}
+};
 
-function renderTasks() {
+const renderTasks = () => {
   const taskContainer = document.querySelector('.task-list-container');
 
   taskContainer.innerHTML = '';
@@ -73,6 +73,9 @@ function renderTasks() {
       const taskTitle = document.createElement('h5');
       taskTitle.innerText = task.name;
 
+      const taskDescription = document.createElement('h6');
+      taskDescription.innerHTML = task.description;
+
       const taskPriority = document.createElement('h6');
       taskPriority.classList.add('task-priority');
       taskPriority.innerText = task.priority;
@@ -90,6 +93,7 @@ function renderTasks() {
 
       titleContainer.appendChild(circle);
       titleContainer.appendChild(taskTitle);
+      titleContainer.appendChild(taskDescription);
       titleContainer.appendChild(taskPriority);
       titleContainer.appendChild(taskDueDate);
       singleTask.appendChild(titleContainer);
@@ -100,6 +104,6 @@ function renderTasks() {
   }
 
   addTasksListeners();
-}
+};
 
 export { renderProjects, renderHeader, renderTasks };

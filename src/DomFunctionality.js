@@ -13,23 +13,23 @@ const newProjectDom = (() => {
   const _descriptionField = document.getElementById('project-description');
   const alertSubmitProject = document.getElementById('alert-submit-project');
 
-  function clear() {
+  const clear = () => {
     _nameField.value = '';
     _descriptionField.value = '';
-  }
+  };
 
-  function hide() {
+  const hide = () => {
     clear();
     submitProjectWindow.style.display = 'none';
-  }
+  };
 
-  function show() {
+  const show = () => {
     editTaskDom.hide();
     newTaskDom.hide();
     submitProjectWindow.style.display = 'block';
-  }
+  };
 
-  function submitProject() {
+  const submitProject = () => {
     if (_nameField.value !== '' && _descriptionField.value !== '') {
       const name = _nameField.value;
       const description = _descriptionField.value;
@@ -43,7 +43,7 @@ const newProjectDom = (() => {
         alertSubmitProject.style.display = 'none';
       }, 1500);
     }
-  }
+  };
 
   return {
     addProjectBtn,
@@ -58,13 +58,13 @@ const newProjectDom = (() => {
 const displayHeader = (() => {
   const headerContainer = document.querySelector('.active-project-container');
 
-  function show() {
+  const show = () => {
     headerContainer.style.display = 'flex';
-  }
+  };
 
-  function hide() {
+  const hide = () => {
     headerContainer.style.display = 'none';
-  }
+  };
 
   return {
     show,
@@ -83,24 +83,24 @@ const newTaskDom = (() => {
   const _priorityField = document.getElementById('priority');
   const alertSubmitTask = document.getElementById('alert-submit-task');
 
-  function show() {
+  const show = () => {
     editTaskDom.hide();
     newProjectDom.hide();
     addTaskWindow.style.display = 'block';
-  }
+  };
 
-  function hide() {
+  const hide = () => {
     clear();
     addTaskWindow.style.display = 'none';
-  }
+  };
 
-  function clear() {
+  const clear = () => {
     _nameField.value = '';
     _dueDateField.value = '';
     _priorityField.value = '';
-  }
+  };
 
-  function submitTask() {
+  const submitTask = () => {
     if (_nameField.value !== '' && _dueDateField.value !== '' && _priorityField.value !== '') {
       const name = _nameField.value;
       const dueDate = _dueDateField.value;
@@ -115,7 +115,7 @@ const newTaskDom = (() => {
         alertSubmitTask.style.display = 'none';
       }, 1500);
     }
-  }
+  };
 
   return {
     addTaskBtn,
@@ -138,25 +138,25 @@ const editTaskDom = (() => {
   const alertEditTask = document.getElementById('alert-edit-task');
   let selectedTask;
 
-  function show(index) {
+  const show = (index) => {
     newProjectDom.hide();
     newTaskDom.hide();
     editTaskWindow.style.display = 'block';
     selectedTask = index;
-  }
+  };
 
-  function hide() {
+  const hide = () => {
     clear();
     editTaskWindow.style.display = 'none';
-  }
+  };
 
-  function clear() {
+  const clear = () => {
     _nameField.value = '';
     _dueDateField.value = '';
     _priorityField.value = '';
-  }
+  };
 
-  function updateTask() {
+  const updateTask = () => {
     if (_nameField.value !== '' && _dueDateField.value !== '' && _priorityField.value !== '') {
       const name = _nameField.value;
       const dueDate = _dueDateField.value;
@@ -170,7 +170,7 @@ const editTaskDom = (() => {
         alertEditTask.style.display = 'none';
       }, 1500);
     }
-  }
+  };
 
   return {
     updateTaskBtn,
