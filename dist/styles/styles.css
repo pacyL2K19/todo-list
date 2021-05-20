@@ -124,6 +124,10 @@ h3 {
 
 .alert {
   display: none;
+}
+
+.alert-show {
+  display: block;
   background-color: red;
   color: white;
   text-align: center;
@@ -377,7 +381,15 @@ input:focus {
   margin: 30px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 2px 20px #eff1f5;
+  /* display: none; */
+}
+
+.hiden {
   display: none;
+}
+
+.shown {
+  display: block;
 }
 
 #edit-task-window input {

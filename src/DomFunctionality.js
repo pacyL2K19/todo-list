@@ -38,9 +38,11 @@ const newProjectDom = (() => {
       clear();
       hide();
     } else {
-      alertSubmitProject.style.display = 'block';
+      alertSubmitProject.classList.remove('alert');
+      alertSubmitProject.className.add('alert-show');
       setTimeout(() => {
-        alertSubmitProject.style.display = 'none';
+        alertSubmitProject.classList.remove('alert-show');
+        alertSubmitProject.className.add('alert');
       }, 1500);
     }
   };
@@ -110,9 +112,11 @@ const newTaskDom = (() => {
       createNewTask(name, dueDate, priority, description);
       hide();
     } else {
-      alertSubmitTask.style.display = 'block';
+      alertSubmitTask.classList.remove('alert');
+      alertSubmitTask.classList.add('alert-show');
       setTimeout(() => {
-        alertSubmitTask.style.display = 'none';
+        alertSubmitTask.classList.remove('alert-show');
+        alertSubmitTask.classList.add('alert');
       }, 1500);
     }
   };
@@ -141,13 +145,15 @@ const editTaskDom = (() => {
   const show = (index) => {
     newProjectDom.hide();
     newTaskDom.hide();
-    editTaskWindow.style.display = 'block';
+    editTaskWindow.classList.add('shown');
+    editTaskWindow.classList.remove('hiden');
     selectedTask = index;
   };
 
   const hide = () => {
     clear();
-    editTaskWindow.style.display = 'none';
+    editTaskWindow.classList.remove('shown');
+    editTaskWindow.classList.add('hiden');
   };
 
   const clear = () => {
@@ -165,9 +171,11 @@ const editTaskDom = (() => {
       editTask(selectedTask, name, dueDate, priority);
       hide();
     } else {
-      alertEditTask.style.display = 'block';
+      alertEditTask.classList.remove('alert');
+      alertEditTask.classList.add('alert-show');
       setTimeout(() => {
-        alertEditTask.style.display = 'none';
+        alertEditTask.classList.remove('alert-show');
+        alertEditTask.classList.add('alert');
       }, 1500);
     }
   };
