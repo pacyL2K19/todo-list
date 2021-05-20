@@ -27,11 +27,12 @@ const getFromLocalMemory = () => {
 };
 
 const setLocalMemory = (projects) => {
-  if (projects !== []) {
-    const myProjectsLocal = JSON.stringify(projects);
-    localStorage.setItem('AllProjects', myProjectsLocal);
-    console.log(localStorage.getItem('AllProjects'));
-  }
+  console.log(projects);
+  // if (projects !== []) {
+  //   const myProjectsLocal = JSON.stringify(projects);
+  //   window.localStorage.setItem('AllProjects', myProjectsLocal);
+  //   console.log(window.localStorage.getItem('AllProjects'));
+  // }
 };
 
 getFromLocalMemory();
