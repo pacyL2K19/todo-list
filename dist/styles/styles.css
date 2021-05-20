@@ -304,10 +304,6 @@ input:focus {
   border-bottom: 1px solid #2268ff;
 }
 
-.submit-project-window {
-  display: none;
-}
-
 .submit-project-window button {
   margin: 1rem 0.7rem;
   padding: 0.8em 2.2em;
@@ -338,7 +334,6 @@ input:focus {
   margin: 30px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 2px 20px #eff1f5;
-  display: none;
 }
 
 #submit-task-window input {
@@ -381,7 +376,6 @@ input:focus {
   margin: 30px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 2px 20px #eff1f5;
-  /* display: none; */
 }
 
 .hiden {
@@ -390,6 +384,10 @@ input:focus {
 
 .shown {
   display: block;
+}
+
+.show-flex {
+  display: flex;
 }
 
 #edit-task-window input {

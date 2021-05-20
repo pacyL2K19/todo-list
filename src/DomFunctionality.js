@@ -20,13 +20,15 @@ const newProjectDom = (() => {
 
   const hide = () => {
     clear();
-    submitProjectWindow.style.display = 'none';
+    submitProjectWindow.classList.add('hiden');
+    if (submitProjectWindow.classList.contains('shown')) submitProjectWindow.classList.remove('shown');
   };
 
   const show = () => {
     editTaskDom.hide();
     newTaskDom.hide();
-    submitProjectWindow.style.display = 'block';
+    submitProjectWindow.classList.add('show');
+    if (submitProjectWindow.classList.contains('hiden')) submitProjectWindow.classList.remove('hiden');
   };
 
   const submitProject = () => {
@@ -61,11 +63,13 @@ const displayHeader = (() => {
   const headerContainer = document.querySelector('.active-project-container');
 
   const show = () => {
-    headerContainer.style.display = 'flex';
+    if (headerContainer.classList.contains('hiden')) headerContainer.classList.remove('hiden');
+    headerContainer.classList.add('show-flex');
   };
 
   const hide = () => {
-    headerContainer.style.display = 'none';
+    if (headerContainer.classList.contains('show-flex') || headerContainer.classList.contains('shown')) headerContainer.classList.remove('show-flex');
+    headerContainer.classList.add('hiden');
   };
 
   return {
@@ -88,12 +92,14 @@ const newTaskDom = (() => {
   const show = () => {
     editTaskDom.hide();
     newProjectDom.hide();
-    addTaskWindow.style.display = 'block';
+    addTaskWindow.classList.add('shown');
+    addTaskWindow.classList.remove('hiden');
   };
 
   const hide = () => {
     clear();
-    addTaskWindow.style.display = 'none';
+    if (addTaskWindow.classList.contains('shown')) addTaskWindow.classList.remove('shown');
+    addTaskWindow.classList.add('hiden');
   };
 
   const clear = () => {
