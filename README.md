@@ -39,7 +39,7 @@
 
 ## Watch the Live Version
 
-[Live Demo](https://pacyl2k19.github.io/restaurant-app/)
+[Live Demo](https://pacyl2k19.github.io/todo-list/)
 
 ### Prerequisites
 
