@@ -73,6 +73,10 @@
     npm run start
     ```
     This will allow you to watch changes in entry files
+8. Run the unit tests and make sure they all pass
+    ```bash
+    npm run test
+    ```
 
 ### Usage
 Lauch the local version of this project opening the `dist/index.html` file in the browser
