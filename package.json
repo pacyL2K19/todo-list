@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "watchTests": "jest --watch",
+    "watch-tests": "jest --watch",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "watch": "webpack --watch",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guillainbisimwa/To-Do-List.git"
+    "url": "git+https://github.com/pacyL2K19/todo-list.git"
   },
   "author": "Pacifique Linjanja",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/guillainbisimwa/To-Do-List/issues"
+    "url": "https://github.com/pacyL2K19/todo-list/issues"
   },
-  "homepage": "https://github.com/guillainbisimwa/To-Do-List#readme",
+  "homepage": "https://github.com/pacyL2K19/todo-list#readme",
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
