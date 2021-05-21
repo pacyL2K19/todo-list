@@ -16,3 +16,9 @@ test('It has all the required properties', () => {
   expect(task).toHaveProperty('priority');
   expect(task).toHaveProperty('description');
 });
+
+test('It contains a dueDate property which is a string in a date format', () => {
+  const dateArr = task.dueDate.split('-');
+  const date = new Date(dateArr[0], dateArr[1] - 1, dateArr[2]);
+  expect(date).toBeInstanceOf(Date);
+});
